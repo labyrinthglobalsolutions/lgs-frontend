@@ -1,0 +1,36 @@
+name: CI check
+
+# Controls when the workflow will run
+on:
+  pull_request:
+    branches:
+      - main
+
+# A workflow run is made up of one or more jobs that can run sequentially or in parallel
+jobs:
+  # This workflow contains a single job called "build"
+  ci:
+    runs-on: ubuntu-20.04
+    steps:
+      - name: Checkout source code
+        uses: actions/checkout@v3
+
+      - name: Set up Node.js
+        uses: actions/setup-node@v2
+        with:
+          node-version: 18.x
+  
+      - name: Install dependencies
+        run: npm install
+  
+      - name: Run tests
+        run: npm test
+    
+      - name: Build Image
+        id: build-image
+        uses: redhat-actions/buildah-build@v2
+        with:
+          image: lgs-backend
+          tags: latest ${{ github.sha }}
+          dockerfiles: |
+            ./Dockerfile
