@@ -19,7 +19,8 @@ RUN npm install -g pm2 serve
 RUN chown -R 1001:0 /app
 USER 1001
 
-RUN chmod +x /app/prepare_env.sh && /app/prepare_env.sh
+RUN chmod +x /app/script.sh && \
+    API_BASE_URL="$API_BASE_URL" WHATSAPPLINK="$WHATSAPPLINK" CHATBOT="$CHATBOT" /app/script.sh
 
 RUN npm run build
 
