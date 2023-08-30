@@ -1,5 +1,7 @@
 #!/bin/bash
+set -ex
 
+cp template.env .env
 # Define the new values you want to set
 NEW_API_BASE_URL=${API_BASE_URL:-"http://localhost:3005"}
 NEW_WHATSAPPLINK=${WHATSAPPLINK:-"https://new.whatsapp.link"}
