@@ -3,7 +3,7 @@ services:
   lgsfrontend:
     env_file:
     - .env
-    image: quay.io/labyrinthglobalsolutions/lgs-frontend:latest
+    image: quay.io/labyrinthglobalsolutions/lgs-frontend:${IMAGE_TAG}
     restart: always
     labels:
       - traefik.frontend.rule=Host:labyrinthglobalsolutions.com,www.labyrinthglobalsolutions.com
