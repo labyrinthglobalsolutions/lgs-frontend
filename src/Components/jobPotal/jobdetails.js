@@ -43,15 +43,24 @@ const JobDetails = () => {
     <div>
       <Header />
       <h1>Job Details</h1>
+      <div className="job-card-container">
+        <h2 className="job-card-heading">
+          Title: <span className="job-main-title">{jobDetails.title}</span>
+        </h2>
 
-      <div className="job-details-container">
-        <div className="job-details-content">
-          <h3 className="job-title">Title: {jobDetails.title}</h3>
-          <p className="job-description">
-            Description: {jobDetails.description}
-          </p>
-          <p className="job-info">Experience: {jobDetails.experience}</p>
-          <p className="job-info">Location: {jobDetails.location}</p>
+        <p className="job-description">{jobDetails.description}</p>
+
+        <div className="job-location-button-container">
+          <div>
+            <p className="job-details">
+              <span className="job-card-heading">Experience:</span>{" "}
+              {jobDetails.experience} years
+            </p>
+            <p className="job-details">
+              <span className="job-card-heading">Location:</span>{" "}
+              {jobDetails.location}
+            </p>
+          </div>
         </div>
       </div>
       <ContactForm />

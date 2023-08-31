@@ -145,13 +145,13 @@
 }
 .Nav-Service-container-items {
   position: absolute;
-  top: 50px;
+  top: 40px;
   left: -170px;
   list-style-type: disc;
   visibility: hidden;
   text-decoration: none;
   display: flex;
-  background-color: white;
+  background-color: #fff;
   flex-wrap: wrap;
   gap: 30px;
   min-width: 450px;
@@ -160,7 +160,7 @@
 
 .Nav-products-container-items {
   position: absolute;
-  top: 50px;
+  top: 40px;
   left: -115px;
   list-style-type: disc;
   visibility: hidden;

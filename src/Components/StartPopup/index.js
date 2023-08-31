@@ -1,11 +1,12 @@
 import React, { useState, useEffect } from "react";
 import "./index.css";
 import { RxCross2 } from "react-icons/rx";
-import 'bootstrap/dist/css/bootstrap.min.css';
+import "bootstrap/dist/css/bootstrap.min.css";
 import ReCAPTCHA from "react-google-recaptcha";
 
-const apiUrl = process.env.REACT_APP_API_BASE_URL
-console.log(apiUrl)
+const apiUrl = process.env.REACT_APP_API_BASE_URL;
+const googleCaptcha = process.env.REACT_APP_CAPTCHA;
+console.log(apiUrl);
 
 const FirstTimePopup = () => {
   const [showPopup, setShowPopup] = useState(false);
@@ -16,6 +17,9 @@ const FirstTimePopup = () => {
   const [comment, setComment] = useState("");
   const [successMsg, setSuccessMsg] = useState("");
   const [errorMsg, setErrorMsg] = useState("");
+  const [Submitbtn, setSubmitbtn] = useState(false);
+  const [isPopupRecaptchaVerified, setIsPopupRecaptchaVerified] =
+  useState(false);
   useEffect(() => {
     const timer = setTimeout(() => {
       setShowPopup(true);
@@ -34,6 +38,7 @@ const FirstTimePopup = () => {
     const service = course;
     const message = comment;
     event.preventDefault();
+    setSubmitbtn(true);
     const phone = phoneNumber;
     try {
       const response = await fetch(`${apiUrl}/register`, {
@@ -66,15 +71,16 @@ const FirstTimePopup = () => {
         console.log(data.error);
         setErrorMsg(data.error);
         setSuccessMsg("");
-
       }
     } catch (error) {
       console.error(error);
+    }finally {
+      setSubmitbtn(false);
     }
   };
-  
+
   const onChange = (value) => {
-    console.log("Captcha value:", value);
+    setIsPopupRecaptchaVerified(true);
   };
 
   const [captchaStyles, setCaptchaStyles] = useState({
@@ -84,7 +90,6 @@ const FirstTimePopup = () => {
     WebkitTransformOrigin: "0 0",
   });
 
- 
   return (
     <>
       {showPopup && (
@@ -184,13 +189,10 @@ const FirstTimePopup = () => {
                   style={captchaStyles}
                   className="google-captcha-container"
                 >
-                  <ReCAPTCHA
-                    sitekey="6LfHycEnAAAAAF_Yt24Y7H6nxaAXeEZ9OCO4Cxz0"
-                    onChange={onChange}
-                  />
+                  <ReCAPTCHA sitekey={googleCaptcha} onChange={onChange} />
                 </div>
-                <button className="login-button" type="submit">
-                  SUBMIT
+                <button className="login-button" type="submit"  disabled={!isPopupRecaptchaVerified}>
+                {Submitbtn ? "Submitting.." : "SUBMIT"}
                 </button>
               </div>
             </form>

@@ -57,9 +57,11 @@
   width: 100%;
   height: fit-content;
   display: block;
+ 
 }
 .career-form {
   height: max-content;
+  padding: 5%;
 }
 .add_career_pop_up_button {
   background: rgb(7, 119, 247) !important;
@@ -73,36 +75,36 @@
   cursor: pointer;
 }
 
-  .career-form-submit-btn {
-    cursor: pointer;
-    background: linear-gradient(#fff, #fff) padding-box,
-      linear-gradient(to right, #196ae5, red 100%) border-box;
-    transition: all 0.5s ease;
-    border: 2.5px solid transparent;
-    color: #000;
-    background-color: transparent;
-  }
+.career-form-submit-btn {
+  cursor: pointer;
+  background: linear-gradient(#fff, #fff) padding-box,
+    linear-gradient(to right, #196ae5, red 100%) border-box;
+  transition: all 0.5s ease;
+  border: 2.5px solid transparent;
+  color: #000;
+  background-color: transparent;
+}
 
-  .career-form-submit-btn:hover {
-    background: linear-gradient(to right, #196ae5, #196ae5) border-box;
-    border: 3px solid transparent;
-    color: #fff;
-    transition: all 0.1s ease;
-    transition-property: all;
-    transition-duration: 0.1s;
-    transition-timing-function: ease;
-    transition-delay: 0s;
-  }
+.career-form-submit-btn:hover {
+  background: linear-gradient(to right, #196ae5, #196ae5) border-box;
+  border: 3px solid transparent;
+  color: #fff;
+  transition: all 0.1s ease;
+  transition-property: all;
+  transition-duration: 0.1s;
+  transition-timing-function: ease;
+  transition-delay: 0s;
+}
 
-.career-input-fields{
+.career-input-fields {
   border: 2px solid rgb(233, 231, 231);
-    border-image: linear-gradient(
-        to right,
-        rgb(0 118 227 / 80%),
-        rgb(255 30 84 / 80%)
-      )
-      1;
-    border-image-slice: 1; 
+  border-image: linear-gradient(
+      to right,
+      rgb(0 118 227 / 80%),
+      rgb(255 30 84 / 80%)
+    )
+    1;
+  border-image-slice: 1;
 }
 
 @media screen and (max-width: 767px) {

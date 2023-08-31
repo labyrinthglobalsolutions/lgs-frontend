@@ -5,6 +5,9 @@ import {  useNavigate } from 'react-router-dom';
 import Header from '../navbar';
 import Footer from '../Footer';
 
+const apiUrl = process.env.REACT_APP_API_BASE_URL;
+
+
 const AdminDashboard = () => {
   
     const navigate = useNavigate();
@@ -22,7 +25,7 @@ const AdminDashboard = () => {
 
   const fetchJobs = async () => {
     try {
-      const response = await axios.get('http://localhost:3005/alljobs');
+      const response = await axios.get(`${apiUrl}/alljobs`);
       setJobs(response.data.data);
     } catch (error) {
       console.error('Error fetching jobs:', error);
@@ -33,7 +36,7 @@ const AdminDashboard = () => {
     try {
       console.log('Deleting job with _id:', _id);
       
-      const url = `http://localhost:3005/jobs/${_id}`;
+      const url = `${apiUrl}/jobs/${_id}`;
       
       const response = await fetch(url, {
         method: 'DELETE',
@@ -61,7 +64,7 @@ const AdminDashboard = () => {
     e.preventDefault();
 
     try {
-      const response = await axios.post('http://localhost:3005/jobs', newJob);
+      const response = await axios.post(`${apiUrl}/jobs`, newJob);
 
       if (response.data.success) {
         // Clear the form and refresh the job list
@@ -87,7 +90,7 @@ const AdminDashboard = () => {
       // You can use Axios or fetch to send the request
       
       // Assuming you have an API endpoint for logout
-      await fetch('http://localhost:3005/logout', {
+      await fetch(`${apiUrl}/logout`, {
         method: 'DELETE',
         credentials: 'include', // Include credentials for session handling
       });
