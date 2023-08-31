@@ -8,14 +8,18 @@ import Footer from "../Footer";
 import Jobs from "../jobPotal/jobs";
 import { BeatLoader } from "react-spinners";
 
+
 class Careers extends Component {
   state = { loading: true };
   componentDidMount() {
     // Simulate an API call or any async operation
+
     window.scrollTo(0,0);
     setTimeout(() => {
       this.setState({ loading: false }); // Set loading to false when your data is ready
     }, 500);
+
+   
   }
   render() {
     const { loading } = this.state;
@@ -27,6 +31,7 @@ class Careers extends Component {
             <BeatLoader size={20} color={"#123abc"} loading={loading} />
           </div>
         ) : (
+
           <div className="container career-form-main-container">
             <div className="row">
               <div className="col-12 col-md-5 careers-heading-container">
@@ -46,9 +51,11 @@ class Careers extends Component {
               <div className=" col-12 col-md-7 careers-image-container">
                 <img className="careers-image" alt="" src={career} />
               </div>
+
             </div>
             <Jobs />
           </div>
+
         )}
         <Footer />
       </>

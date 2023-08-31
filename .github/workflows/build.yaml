@@ -20,6 +20,10 @@ jobs:
         with:
           image: lgs-frontend
           tags: latest ${{ github.sha }}
+          build-args: |
+            API_BASE_URL_ARG=${{ secrets.API_URL }}
+            WHATSAPPLINK_ARG=${{ secrets.WHATSAPPLINK }}
+            CHATBOT_ARG=${{ secrets.CHATBOT }}
           dockerfiles: |
             ./Dockerfile
       - name: Push To quay.io
