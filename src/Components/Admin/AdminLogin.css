@@ -9,6 +9,10 @@
 }
 
 .admin-inner-card {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  align-self: center;
   width: 300px;
   height: 400px;
   perspective: 1000px;
@@ -33,7 +37,11 @@
   margin: 6px;
   font-family: inherit;
   font-size: inherit;
+  border-radius: 4px;
+  height: 40px;
   line-height: inherit;
+  outline: none;
+  border: none;
 }
 
 .card-front {
@@ -45,13 +53,18 @@
 }
 
 .admin-submit-btn {
-  padding: 8px 12px;
-  margin-top: 10px;
   background-color: #007bff;
   color: white;
   border: none;
   cursor: pointer;
   border-radius: 5px;
+  height: 35px;
+  width: 80px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 8px;
+  align-self: center;
 }
 
 .admin-submit-btn:hover {

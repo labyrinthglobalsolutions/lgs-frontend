@@ -34,7 +34,7 @@ import AdminLoginPage from "./Components/Admin/adminLogin";
 import AdminDashboard from "./Components/Admin/admindashboard";
 import { useEffect, useState } from "react";
 function App() {
-  const apiUrl = process.env.REACT_APP_API_BASE_URL
+  const apiUrl = process.env.REACT_APP_API_BASE_URL;
 
   const [isAuthenticated, setIsAuthenticated] = useState(false);
 
@@ -46,7 +46,7 @@ function App() {
         });
         setIsAuthenticated(response.data.isAuthenticated);
       } catch (error) {
-        console.error('Authentication check error:', error);
+        console.error("Authentication check error:", error);
       }
     };
 
@@ -55,7 +55,6 @@ function App() {
   return (
     <>
       <div>
-       
         <CountriesBar />
         <Chat />
         <WhatsAppIntegration />
@@ -109,15 +108,20 @@ function App() {
           <Route exact path="/smoservice" element={<SMO />} /> */}
           <Route exact path="/contactus" element={<ContactPage />} />
           <Route exact path="/salesforcepage" element={<SalesForce />} />
-       
-        
+
           <Route exact path="/contactus" element={<ContactPage />} />
           <Route exact path="/testing" element={<TestingPage />} />
           <Route exact path="/testing" element={<TestingPage />} />
           <Route path="/career/:id" element={<JobDetails />} />
           <Route
             path="/umarmohammadsheikh/dashboard"
-            element={isAuthenticated ? <AdminDashboard /> : <Navigate to="/umarmohammadsheikh" />}
+            element={
+              isAuthenticated ? (
+                <AdminDashboard />
+              ) : (
+                <Navigate to="/umarmohammadsheikh" />
+              )
+            }
           />
           {/* Login page */}
           <Route path="/umarmohammadsheikh" element={<AdminLoginPage />} />

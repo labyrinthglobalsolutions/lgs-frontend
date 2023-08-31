@@ -1,7 +1,10 @@
 import React, { useState } from "react";
 import ReCAPTCHA from "react-google-recaptcha";
 import axios from "axios";
-// import Jobs from "../jobPotal/jobs";
+import Jobs from "../jobPotal/jobs";
+
+const apiUrl = process.env.REACT_APP_API_BASE_URL;
+const googleCaptcha = process.env.REACT_APP_CAPTCHA;
 
 const ContactForm = () => {
   const [formData, setFormData] = useState({
@@ -19,6 +22,13 @@ const ContactForm = () => {
     expectedCTC: "",
     noticePeriod: "",
     resume: null,
+  });
+
+  const [captchaStyles, setCaptchaStyles] = useState({
+    transform: "scale(0.77)",
+    WebkitTransform: "scale(0.77)",
+    transformOrigin: "0 0",
+    WebkitTransformOrigin: "0 0",
   });
 
   const handleInputChange = (event) => {
@@ -53,8 +63,6 @@ const ContactForm = () => {
       formDataToSend.append("expectedCTC", formData.expectedCTC);
       formDataToSend.append("noticePeriod", formData.noticePeriod);
       formDataToSend.append("resume", formData.resume);
-
-      const apiUrl = process.env.REACT_APP_API_BASE_URL
 
       // Send the form data to the server using axios
       const response = await axios.post(
@@ -91,23 +99,20 @@ const ContactForm = () => {
     }
   };
 
-  const onChange = () => {
-
-  }
+  const onChange = () => {};
 
   return (
-    
     <div className="row career-form ">
-       {/* <Jobs/> */}
-      <h4 className="col-12 semi_heading-career text-center text-uppercase pt-5 font-weight-bold careers-heading">
+      {/* <Jobs/> */}
+      <h4 className="col-12 semi_heading-career text-center text-uppercase p-0 font-weight-bold careers-heading">
         Come Work With Us
       </h4>
-      <div className="text-uppercase text-center pb-5">
+      <div className="text-uppercase text-center p-0">
         Don't be shY! Drop us a line and our team will get to you asap.
       </div>
       <form id="career_form" onSubmit={handleSubmit}>
-        <div className="row career-contact rounded pb-3">
-          <div className="col-12 col-md-6">
+        <div className="row career-contact rounded ">
+          <div className="col-12 col-md-6 p-3 ">
             <div className="form-group">
               <label htmlFor="career_name">
                 Name <span style={{ color: "red" }}>*</span>
@@ -221,7 +226,7 @@ const ContactForm = () => {
               </select>
             </div>
           </div>
-          <div className="col-12 col-md-6">
+          <div className="col-12 col-md-6 p-3">
             <div className="form-group">
               <label htmlFor="career_email">
                 Email <span style={{ color: "red" }}>*</span>
@@ -294,18 +299,30 @@ const ContactForm = () => {
                 onChange={handleInputChange}
               />
             </div>
-            <ReCAPTCHA className="mt-2" sitekey="6LfHycEnAAAAAF_Yt24Y7H6nxaAXeEZ9OCO4Cxz0" onChange={onChange} />
+            <div
+              className="g-recaptcha"
+              data-theme="light"
+              data-sitekey="XXXXXXXXXXXXX"
+              style={captchaStyles}
+              className="google-captcha-container"
+            >
+              <ReCAPTCHA
+                className="mt-2"
+                sitekey={googleCaptcha}
+                onChange={onChange}
+              />
+            </div>
             <div className="form-group">
               <label htmlFor="attach_document">
                 Attach your resume <span style={{ color: "red" }}>*</span>
               </label>
               <div
-                className="custom-file cursor-pointer z-1"
+                className="custom-file cursor-pointer z-1 "
                 id="attach_document"
               >
                 <input
                   type="file"
-                  className="custom-file-input cursor-pointer career-input-fields"
+                  className="custom-file-input cursor-pointer file-css"
                   id="customFile"
                   name="resume"
                   required

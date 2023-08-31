@@ -22,6 +22,8 @@
 
   .contactus-hero-section-description {
     font-size: 13px;
+    padding-left: 12px;
+    padding-right: 10px;
   }
 
   .checkbox-container {
@@ -248,6 +250,8 @@
 
   .contactus-hero-section-description {
     font-size: 13px;
+    padding-left: 12px;
+    padding-right: 10px;
   }
 
   .checkbox-container {
@@ -625,7 +629,6 @@
     margin-top: 5px;
     width: 100%;
   }
-
 
   .queryTextarea {
     height: 100px;
