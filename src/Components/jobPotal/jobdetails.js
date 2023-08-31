@@ -42,7 +42,8 @@ const JobDetails = () => {
   return (
     <div>
       <Header />
-      <h1>Job Details</h1>
+      <div className="job-details-container">
+      <h1 className="text-center">Job Details</h1>
       <div className="job-card-container">
         <h2 className="job-card-heading">
           Title: <span className="job-main-title">{jobDetails.title}</span>
@@ -62,6 +63,7 @@ const JobDetails = () => {
             </p>
           </div>
         </div>
+      </div>
       </div>
       <ContactForm />
       <Footer />

@@ -96,7 +96,7 @@ const FirstTimePopup = () => {
         <div className="popup">
           <div className="card-container-3">
             <div className="popup-image-container ">
-              <div>
+              <div className="popup-description-container">
                 <h1 className="popup-heading">Get a Free Demo</h1>
                 <p className="popup-para">
                   Please Fill the form our expert will contact you

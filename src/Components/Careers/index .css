@@ -61,7 +61,12 @@
 }
 .career-form {
   height: max-content;
-  padding: 5%;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin: 0;
 }
 .add_career_pop_up_button {
   background: rgb(7, 119, 247) !important;
@@ -105,6 +110,10 @@
     )
     1;
   border-image-slice: 1;
+}
+
+.file-css{
+  width: 100%;
 }
 
 @media screen and (max-width: 767px) {

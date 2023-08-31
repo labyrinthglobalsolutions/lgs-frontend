@@ -19,9 +19,10 @@ class Consultant extends Component {
 
   componentDidMount() {
     // Simulate an API call or any async operation
+    window.scrollTo(0,0);
     setTimeout(() => {
       this.setState({ loading: false }); // Set loading to false when your data is ready
-    }, 500); // Simulating a 2-second delay
+    }, 500);
   }
 
   render() {

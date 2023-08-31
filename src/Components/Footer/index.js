@@ -67,44 +67,8 @@ const Footer = () => {
               has the required experience to help architect, design, develop and
               deliver any technical solution to your organization..
             </p>
-            <div className="footerIconsContainer p-2">
-              <div>
-                <a
-                  href="https://m.facebook.com/LabyrinthGlobalSolutions/"
-                  target="_blank"
-                >
-                  <BiLogoFacebook
-                    className="footerIconSocial"
-                    size="30"
-                    height="30"
-                  />
-                </a>
-              </div>
-              <div>
-                <a
-                  href="https://twitter.com/i/flow/login?redirect_after_login=%2Fsollabyrinth"
-                  target="_blank"
-                >
-                  <AiOutlineTwitter
-                    className="footerIconSocial"
-                    size="30"
-                    height="30"
-                  />
-                </a>
-              </div>
-              <div>
-                <a
-                  rel="noopener noreferrer"
-                  href="https://www.linkedin.com/company/labyrinth-global-solutions/mycompany/"
-                  target="_blank"
-                >
-                  <TiSocialLinkedin
-                    className="footerIconSocial"
-                    size="30"
-                    height="30"
-                  />
-                </a>
-              </div>
+            <div>
+              <p>&copy;  Labyrinth Global Solutions 2023. All rights reserved.</p>
             </div>
           </div>
         </div>
