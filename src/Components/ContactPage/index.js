@@ -1,6 +1,5 @@
-
 import "./index.css";
-import { Component, useState,useEffect } from "react";
+import { Component, useState, useEffect } from "react";
 import ContactTabItem from "../ContactTabs";
 import { Navigate } from "react-router-dom";
 import "bootstrap/dist/css/bootstrap.min.css";
@@ -18,7 +17,7 @@ const tabsList = [
 
 // Write your code here
 
-const googleCaptcha = process.env.REACT_APP_CAPTCHA
+const googleCaptcha = process.env.REACT_APP_CAPTCHA;
 
 const ContactPage = () => {
   const [tab, changeTabId] = useState(tabsList[0].tabId);
@@ -39,8 +38,8 @@ const ContactPage = () => {
     useState(false);
 
   useEffect(() => {
-    window.scrollTo(0,0);
-  },[])
+    window.scrollTo(0, 0);
+  }, []);
 
   const changeTab = (tabId) => {
     changeTabId(tabId);
@@ -49,7 +48,7 @@ const ContactPage = () => {
     value: code,
     label: countries.countries[code].name,
   }));
-
+  console.log(countryOptions);
   const apiUrl = process.env.REACT_APP_API_BASE_URL;
 
   const submitContactServices = async (e) => {
@@ -82,8 +81,7 @@ const ContactPage = () => {
       }
     } catch (error) {
       console.error("Error", error);
-      
-    }finally {
+    } finally {
       setSubmitbtn(false);
     }
   };
