@@ -1,5 +1,7 @@
+
 import "./index.css";
-import { Component, useState, useEffect } from "react";
+import "./index.css";
+import { Component, useState,useEffect } from "react";
 import ContactTabItem from "../ContactTabs";
 import { Navigate } from "react-router-dom";
 import "bootstrap/dist/css/bootstrap.min.css";
@@ -17,7 +19,7 @@ const tabsList = [
 
 // Write your code here
 
-const googleCaptcha = process.env.REACT_APP_CAPTCHA;
+const googleCaptcha = process.env.REACT_APP_CAPTCHA
 
 const ContactPage = () => {
   const [tab, changeTabId] = useState(tabsList[0].tabId);
