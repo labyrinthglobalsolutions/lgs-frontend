@@ -54,7 +54,7 @@ const Details = [
 ];
 
 class HomePage extends Component {
-  state  = {loading: true}
+  state = { loading: true };
   componentDidMount() {
     // Attach the scroll event listener to the window
     window.addEventListener("scroll", this.handleScroll);
@@ -66,7 +66,6 @@ class HomePage extends Component {
   componentWillUnmount() {
     // Remove the scroll event listener when the component is unmounted
     window.removeEventListener("scroll", this.handleScroll);
-    
   }
 
   handleScroll = () => {
@@ -85,116 +84,127 @@ class HomePage extends Component {
 
   render() {
     const { loading } = this.state;
-    return (     
-      <> 
-          <div>
+    return (
+      <>
+        <div>
           <HomepageHeader />
           {loading ? (
-          <div className="spinner">
-            <BeatLoader size={20} color={"#123abc"} loading={loading} />
-          </div>
-        ) : (
-          <div>
-           <div className="container-fluid">
-          <div className="home-page-slider-main-container row">
-            <div className="col-12 col-md-6">
-              <ReactSlick />
+            <div className="spinner">
+              <BeatLoader size={20} color={"#123abc"} loading={loading} />
             </div>
-            <div className="col-12 col-md-6">
-              <ImageSlider />
-            </div>
-          </div>
+          ) : (
+            <div>
+              <div className="container-fluid">
+                <div className="home-page-slider-main-container row">
+                  <div className="col-12 col-md-6">
+                    <ReactSlick />
+                  </div>
+                  <div className="col-12 col-md-6">
+                    <ImageSlider />
+                  </div>
+                </div>
 
-          <div className="row p-5">
-            <div className="col-12 col-md-7 home-page-content-container">
-              <h1 className="home-page-heading">About LGS</h1>
-              <h5 className="mb-4 home-page-paragraph">
-                Welcome to the world of innovation and digital excellence! At
-                Labyrinth Global Solutions, we are more than just an IT company;
-                we are your partners in transforming ideas into reality. As
-                pioneers in web and app development, we harness the power of
-                technology to create seamless digital experiences that drive
-                growth and inspire change.
-              </h5>
-              <h4 className="home-page-heading">Industries We are Serving </h4>
-              <div className="home-page-list-container">
-                <ul>
-                  <li className="home-page-list">
-                    <TiTick className="home-page-tick" />
-                    Health Tech
-                  </li>
-                  <li className="home-page-list">
-                    {" "}
-                    <TiTick className="home-page-tick" />
-                    Automotive & Transportation
-                  </li>
-                  <li className="home-page-list">
-                    {" "}
-                    <TiTick className="home-page-tick" /> Aerospace
-                  </li>
-                </ul>
-                <ul>
-                  <li className="home-page-list">
-                    {" "}
-                    <TiTick className="home-page-tick" />
-                    Oil & Gas
-                  </li>
-                  <li className="home-page-list">
-                    {" "}
-                    <TiTick className="home-page-tick" />
-                    Enterprise Agile (SAFe)
-                  </li>
-                </ul>
+                <div className="row p-5">
+                  <div className="col-12 col-md-7 home-page-content-container">
+                    <h1 className="home-page-heading">About LGS</h1>
+                    <h5 className="mb-4 home-page-paragraph">
+                      Welcome to the world of innovation and digital excellence!
+                      At Labyrinth Global Solutions, we are more than just an IT
+                      company; we are your partners in transforming ideas into
+                      reality. As pioneers in web and app development, we
+                      harness the power of technology to create seamless digital
+                      experiences that drive growth and inspire change.
+                    </h5>
+                    <h4 className="home-page-heading">
+                      Industries We are Serving{" "}
+                    </h4>
+                    <div className="home-page-list-container">
+                      <ul>
+                        <li className="home-page-list">
+                          <TiTick className="home-page-tick" />
+                          Health Tech
+                        </li>
+                        <li className="home-page-list">
+                          {" "}
+                          <TiTick className="home-page-tick" />
+                          Automotive & Transportation
+                        </li>
+                        <li className="home-page-list">
+                          {" "}
+                          <TiTick className="home-page-tick" /> Aerospace
+                        </li>
+                      </ul>
+                      <ul>
+                        <li className="home-page-list">
+                          {" "}
+                          <TiTick className="home-page-tick" />
+                          Oil & Gas
+                        </li>
+                        <li className="home-page-list">
+                          {" "}
+                          <TiTick className="home-page-tick" />
+                          Enterprise Agile (SAFE)
+                        </li>
+                      </ul>
+                    </div>
+                    <Link to="/contactus">
+                      <button className="learn-more-button">
+                        Learn More{" "}
+                        <BsArrowRightShort className="home-page-arrow" />
+                      </button>
+                    </Link>
+                  </div>
+                  <div className="col-12 col-md-5">
+                    <img
+                      src={lgshome}
+                      alt="home-page"
+                      className="home-page-image "
+                    />
+                  </div>
+                  <div className="col-12 mincards-container">
+                    <Minicards />
+                  </div>
+                </div>
+                <div className="row">
+                  <h1 className="text-center home-page-heading">
+                    BRIDGING THE GAP BETWEEN BUSINESS AND TECHNOLOGY
+                  </h1>
+                </div>
+                <div className="row">
+                  <Services />
+                </div>
+                <div className="row p-5">
+                  <h1 className="home-page-heading text-center">Why Us</h1>
+                  <div className="col-12 col-lg-5 mt-3 home-reval about-us-image-container">
+                    <img
+                      className="home-about-us-image"
+                      src={about}
+                      alt="why-us"
+                    />
+                  </div>
+                  <div className="col-12 col-lg-7 mt-4 home-reval">
+                    <ul className="home-page-why-us-container">
+                      {Details.map((eachItem) => (
+                        <WhyUs key={eachItem.id} details={eachItem} />
+                      ))}
+                    </ul>
+                  </div>
+                  <IndustriesPage />
+                  <div className="Technology-mbl-container" id="technologies">
+                    <TechnologiesPage />
+                  </div>
+                  <div className="home-clients" id="clients">
+                    <Card />
+                  </div>
+                </div>
+                <StartPopup />
+                {/* <Chat /> */}
               </div>
-              <Link to="/contactus">
-                <button className="learn-more-button">
-                  Learn More <BsArrowRightShort className="home-page-arrow" />
-                </button>
-              </Link>
             </div>
-            <div className="col-12 col-md-5">
-              <img src={lgshome} alt="home-page" className="home-page-image " />
-            </div>
-            <div className="col-12 mincards-container">
-              <Minicards />
-            </div>
-          </div>
-          <div className="row">
-            <h1 className="text-center home-page-heading">
-              BRIDGING THE GAP BETWEEN BUSINESS AND TECHNOLOGY
-            </h1>
-          </div>
-          <div className="row">
-            <Services />
-          </div>
-          <div className="row p-5">
-            <h1 className="home-page-heading text-center">Why Us</h1>
-            <div className="col-12 col-lg-5 mt-3 home-reval about-us-image-container">
-              <img className="home-about-us-image" src={about} alt="why-us" />
-            </div>
-            <div className="col-12 col-lg-7 mt-4 home-reval">
-              <ul className="home-page-why-us-container">
-                {Details.map((eachItem) => (
-                  <WhyUs key={eachItem.id} details={eachItem} />
-                ))}
-              </ul>
-            </div>
-            <IndustriesPage />
-            <div className="Technology-mbl-container" id="technologies">
-              <TechnologiesPage />
-            </div>
-            <div className="home-clients" id="clients">
-              <Card />
-            </div>
-          </div>
-          <StartPopup />
-          {/* <Chat /> */}
+          )}
+          <Footer />
         </div>
-          </div>
-        )}
-        <Footer />
-        </div>
-        </>
+      </>
     );
   }
 }
