@@ -59,9 +59,9 @@ class about extends Component {
           </div>
         ) : (
           <div className="mainContainer">
-            <div className="aboutus-image-container">
+            <div className="aboutus-banner-container">
               <div className="about-us-banner-heading-container">
-                <h1 className="about-top-heading">
+                <h1 className="aboutus-banner-heading">
                   Discover Our Story:
                   <br /> Who We Are and What We Stand For
                 </h1>
@@ -74,7 +74,7 @@ class about extends Component {
                 />
               </div>
             </div>
-            <div className="aboutUsCard">
+            <div className="aboutUsCard-main-contianer">
               <div className="about-us-quote-main-container">
                 <div className="about-us-quote-mini-container">
                   <div className="about-us-quote-description-container">
@@ -91,7 +91,7 @@ class about extends Component {
                     </p>
                   </div>
                   <div className="about-us-quote">
-                    <h3>
+                    <h3 style={{textAlign: 'center'}}>
                       <BiSolidQuoteAltLeft />
                       Committed to Excellence, Crafting Success, One Client at a
                       Time.
