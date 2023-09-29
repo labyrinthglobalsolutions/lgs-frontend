@@ -50,12 +50,12 @@
 
 .mendix-card-description {
   font-size: 15px;
-  padding: 65px;
+  padding: 15px;
 }
 
 .mendixpic {
-  height: 400px;
-  width: 400px;
+  height: max-content;
+  width: 100%;
   border-radius: 15px;
 }
 
@@ -238,8 +238,8 @@
   display: flex;
 }
 .reseller-mendix-pic-2 {
-  height: 350px;
-  width: 350px;
+  height: max-content;
+  width: 100%;
   background-color: #f9f6f6;
   border-radius: 8px;
   margin-right: 0px;
@@ -248,8 +248,8 @@
 
 @media screen and (max-width: 767px) {
   .reseller-mendix-pic-2 {
-    height: 350px;
-    width: 350px;
+    height: max-content;
+    width: 100%;
     background-color: #f9f6f6;
     border-radius: 8px;
     margin-right: 0px;

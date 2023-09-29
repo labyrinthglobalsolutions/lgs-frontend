@@ -11,7 +11,7 @@
   flex-direction: column;
 }
 
-.reseller-polarian-side-description{
+.reseller-polarian-side-description {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -80,8 +80,8 @@
 }
 
 .polarian-second-pic {
-  height: 400px;
-  width: 400px;
+  height: max-content;
+  width: 100%;
   background-color: #f9f6f6;
 }
 
@@ -193,7 +193,7 @@
   transition: 0.5s;
 }
 
-.card-container .polairan-card:hover .img-box {
+.card-container .polarian-card:hover .img-box {
   top: -100px;
   scale: 0.75;
   box-shadow: 0 15px 45px rgba(0, 0, 0, 0.2);
@@ -201,7 +201,7 @@
   width: 200px;
 }
 
-.card-container .polairan-card .img-box .img-box-image-polarion {
+.card-container .polarian-card .img-box .img-box-image-polarion {
   position: absolute;
   top: 0;
   left: 0;
@@ -221,12 +221,12 @@
   transition: 0.5s;
 }
 
-.card-container .polariancard:hover .content {
+.card-container .polarian-card:hover .content {
   top: 130px !important ;
   height: 300px !important;
 }
 
-.card-container .polariancard .content h2 {
+.card-container .polarian-card .content h2 {
   font-size: 1.5rem;
   font-weight: 700;
 }
@@ -274,8 +274,8 @@
   }
   .polarian-second-pic {
     margin-top: 40px;
-    width: 350px;
-    height: 350px;
+    width: 100%;
+    height: max-content;
   }
 }
 
@@ -291,8 +291,8 @@
   }
   .polarian-second-pic {
     margin-top: 40px;
-    width: 250px;
-    height: 250px;
+    width: 100%;
+    height: max-content;
   }
   .polarian-second-pic-container {
     display: flex;
