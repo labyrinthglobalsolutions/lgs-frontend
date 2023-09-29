@@ -1,55 +1,8 @@
-@media screen and (min-width: 1025px) {
-  .whatsapp-icon {
-    height: 60px;
-    width: 60px;
-    z-index: 100;
-    top: 100;
-    position: fixed;
-  }
-
-  .whatsapp-container {
-    position: fixed;
-    top: 80%;
-    right: 2% !important;
-    height: 50px;
-    right: 0px;
-    z-index: 999;
-    cursor: pointer;
-  }
-}
-
-@media screen and (max-width: 767px) {
-  .whatsapp-container {
-    position: fixed;
-    width: 120px;
-    height: 80px;
-    padding: 15px;
-    z-index: 999;
-    cursor: pointer;
-    bottom: 34px;
-    left: -3%;
-  }
-  .whatsapp-icon {
-    height: 40px;
-    width: 40px;
-    z-index: 100;
-    top: 100;
-    position: fixed;
-  }
-}
-@media screen and (min-width: 768px) and (max-width: 1024px) {
-  .whatsapp-container {
-    position: fixed;
-    top: 80%;
-    height: 50px;
-    right: 25px;
-    cursor: pointer;
-  }
-  .whatsapp-icon {
-    height: 50px;
-    width: 50px;
-    z-index: 100;
-    top: 100;
-    position: fixed;
-  }
+.whatsapp-icon {
+  height: 60px;
+  width: 60px;
+  z-index: 100;
+  bottom: 90px; /* Adjust this value to set the desired distance from the bottom */
+  right: 23px; /* Adjust this value to set the desired distance from the left */
+  position: fixed;
 }

@@ -1,5 +1,9 @@
 /*new code original*/
 
+.contact-container {
+  max-height: max-content;
+}
+
 /*Mobile */
 @media screen and (max-width: 480px) {
   .contact-page-main-container {
@@ -41,11 +45,10 @@
   }
 
   .contact-container {
-    height: auto;
+    height: max-content;
     display: flex;
     flex-direction: column;
     align-items: flex-start;
-    min-height: 100vh;
     background-color: #f7f7f7 !important;
     padding: 20px;
   }
@@ -269,11 +272,10 @@
   }
 
   .contact-container {
-    height: auto;
+    height: max-content;
     display: flex;
     flex-direction: column;
     align-items: flex-start;
-    min-height: 100vh;
     background-color: #f7f7f7 !important;
     padding: 20px;
   }
@@ -480,11 +482,10 @@
   }
 
   .contact-container {
-    height: auto;
+    height: max-content;
     display: flex;
     flex-direction: column;
     align-items: flex-start;
-    min-height: 100vh;
     padding: 60px;
     padding-top: 30px;
   }
@@ -688,11 +689,11 @@
   }
 
   .contact-container {
-    height: auto;
+    height: max-content;
     display: flex;
     flex-direction: column;
     align-items: flex-start;
-    min-height: 100vh;
+
     padding: 40px;
   }
 
@@ -892,11 +893,10 @@
   }
 
   .contact-container {
-    height: auto;
+    height: max-content;
     display: flex;
     flex-direction: column;
     align-items: flex-start;
-    min-height: 100vh;
     padding: 80px;
     padding-left: 150px;
   }
@@ -1087,7 +1087,6 @@
   .contact-page-main-container {
     width: 100%;
     box-sizing: border-box;
-    height: 100vh;
   }
 
   .Contact-hero-section {
@@ -1126,11 +1125,9 @@
   }
 
   .contact-container {
-    height: auto;
     display: flex;
     flex-direction: column;
     align-items: flex-start;
-    min-height: 100vh;
     padding: 40px;
   }
 
@@ -1140,6 +1137,7 @@
     flex-direction: column;
     justify-content: space-around;
     align-items: flex-start;
+    max-height: max-content;
   }
 
   .contact-input-fields-container {

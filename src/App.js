@@ -33,6 +33,7 @@ import JobDetails from "./Components/jobPotal/jobdetails";
 import AdminLoginPage from "./Components/Admin/adminLogin";
 import AdminDashboard from "./Components/Admin/admindashboard";
 import { useEffect, useState } from "react";
+import Faqpage from "./Components/FaqPage";
 function App() {
   const apiUrl = process.env.REACT_APP_API_BASE_URL;
 
@@ -89,23 +90,7 @@ function App() {
             element={<DigitalMarketing />}
           />
           <Route exact path="/testing" element={<TestingPage />} />
-          {/* <Route
-            exact
-            path="/websitemaintanance"
-            element={<WebsiteMaintanance />}
-          />
-          <Route
-            exact
-            path="/websitedevelop"
-            element={<WebsiteDevelopment />}
-          />
-          <Route exact path="/orm" element={<OrmTable />} />
-          <Route exact path="/ppc" element={<PpcTable />} />
-          <Route exact path="/smm" element={<Smm />} />
-          <Route exact path="/seo" element={<PricingPage />} />s
-          <Route exact path="/logodesign" element={<Ourlogo />} />
-          
-          <Route exact path="/smoservice" element={<SMO />} /> */}
+
           <Route exact path="/contactus" element={<ContactPage />} />
           <Route exact path="/salesforcepage" element={<SalesForce />} />
 
@@ -125,6 +110,7 @@ function App() {
           />
           {/* Login page */}
           <Route path="/umarmohammadsheikh" element={<AdminLoginPage />} />
+          <Route path="/faqsPage" element={<Faqpage />} />
         </Routes>
       </div>
     </>

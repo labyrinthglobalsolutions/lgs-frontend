@@ -3,7 +3,7 @@
 .sticky-header {
   position: sticky;
   top: 0;
-  z-index: 100; /* Make sure the header is above other elements */
+  z-index: 20; /* Make sure the header is above other elements */
   /* Add more styling properties as needed */
 }
 .inactive {
@@ -73,7 +73,7 @@
 }
 
 .nav-website-logo {
-  width: 55px;
+  width: 45px;
 }
 
 .nav-mobile-btn {
@@ -154,7 +154,7 @@
   background-color: white;
   flex-wrap: wrap;
   gap: 30px;
-  min-width: 450px;
+  min-width: 350px;
   z-index: 100;
 }
 
@@ -184,10 +184,10 @@
 
 .Nav-Service-container:hover .Nav-Service-container-items {
   visibility: visible;
-  padding-left: 40px;
-  padding-top: 5px;
-  padding-bottom: 20px;
+  padding-top: 10px;
+  padding-bottom: 20%;
   margin-top: 4px;
+  padding-left: 20%;
 }
 .Headeroption-item {
   color: #222;
@@ -217,8 +217,8 @@
 }
 @media (max-width: 1000px) {
   .nav-service-flex-contianer {
-    left: -300px;
-    min-width: 44vw;
+    left: -89px;
+    min-width: 0vw;
   }
 }
 @media (min-width: 1000px) {
@@ -228,7 +228,7 @@
 }
 @media (max-width: 900px) {
   .nav-service-flex-contianer {
-    left: -250px;
+    left: -83px;
   }
 }
 
@@ -300,7 +300,7 @@
   background-color: white;
 }
 .nav-service-flex-contianer-items {
-  width: 620px;
+  width: 529px;
   display: flex;
   justify-content: space-between;
 }
@@ -437,7 +437,7 @@
 .Nav-Reseller-container-items {
   position: absolute;
   top: 43px;
-  left: -85px;
+  left: -29px;
   list-style-type: disc;
   visibility: hidden;
   text-decoration: none;
@@ -447,14 +447,13 @@
   flex-wrap: wrap;
   gap: 0px;
   z-index: 100;
-  min-width: 220px;
+  min-width: 188%;
 }
 
 .Nav-Reseller-container:hover .Nav-Reseller-container-items {
   visibility: visible;
-  padding-left: 50px;
+  padding-left: 30%;
   padding-top: 10px;
-  padding-bottom: 10px;
 }
 .Headeroption-item1 {
   color: #222;
@@ -484,8 +483,8 @@
     border-bottom-style: none;
   }
   .nav-mobile-logo {
-    height: 40px;
-    width: 40px;
+    height: 30px;
+    width: 30px;
   }
 }
 
@@ -519,7 +518,7 @@
 
 @media screen and (min-width: 767px) {
   .nav-website-logo {
-    width: 59px;
+    width: 45px;
     margin-right: 10px;
   }
   .nav-content {
@@ -528,7 +527,7 @@
 }
 @media screen and (min-width: 1000px) {
   .nav-website-logo {
-    width: 59px;
+    width: 45px;
     margin-right: 100px;
   }
   .nav-content {
