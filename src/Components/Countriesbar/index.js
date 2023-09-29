@@ -1,6 +1,7 @@
 import React, { Component } from "react";
 import "bootstrap/dist/css/bootstrap.min.css";
 import uklogo from "../images/uklogo.png";
+import Twitter from '../images/Twitter-logo.png'
 import "./index.css";
 
 class CountriesBar extends Component {
@@ -26,9 +27,9 @@ class CountriesBar extends Component {
               rel="noopener noreferrer"
             >
               <img
-                src="https://www.techasoft.com/debug/img/twitter-1.svg"
+                src={Twitter}
                 alt="twitter"
-                className="icon-image"
+                className="twitter-icon-image"
               />
             </a>
             <a

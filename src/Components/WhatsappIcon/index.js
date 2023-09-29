@@ -9,9 +9,8 @@ const whatsppAPI = process.env.REACT_APP_WHATSAPPLINK;
 
 const WhatsAppIntegration = () => {
   return (
-    <div className="whatsapp-container">
       <a
-        className="nav-join-whatsapp-anchor mr-5"
+        className="nav-join-whatsapp-anchor mr-5 whatsapp-button"
         href={whatsppAPI}
         target="_blank"
         rel="noopener noreferrer"
@@ -22,7 +21,6 @@ const WhatsAppIntegration = () => {
           animationData={WhatsappTime}
         />
       </a>
-    </div>
   );
 };
 

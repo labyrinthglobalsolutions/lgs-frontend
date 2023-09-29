@@ -28,12 +28,7 @@ class ResellerPolarian extends Component {
         ) : (
           <div className="resellar-polarian-main-container container-fluid">
           <div className="siemens-resellar-polarian-card row ">
-            <div className="siemens-resellar-polarian-hover-card col-12 col-md-6">
-              <img
-                alt="siemens-card-logo"
-                className="siemens-card-logo"
-                src="https://res.cloudinary.com/dg81jw9qd/image/upload/v1689752914/12-1-300x298_zuhtua.png"
-              />
+            <div className="reseller-polarian-side-description col-12 col-md-6">
               <div className="resellar-polarian-card-description">
                 <h1 className="resellar-polarian-card-description-heading">
                   SIEMENS POLARION
@@ -69,12 +64,8 @@ class ResellerPolarian extends Component {
                 src="https://res.cloudinary.com/dg81jw9qd/image/upload/v1690458028/csm_Functional-Safety-automotive_b35b168de7_eu75p1.jpg"
               />
             </div>
-            <div className="siemens-resellar-polarian-hover-card col-12 col-md-6">
-              <img
-                alt="siemens-card-logo"
-                className="siemens-card-logo"
-                src="https://res.cloudinary.com/dg81jw9qd/image/upload/v1689752914/12-1-300x298_zuhtua.png"
-              />
+            <div className="reseller-polarian-side-description col-12 col-md-6">
+             
               <div className="resellar-polarian-card-description">
                 <h1 className="resellar-polarian-card-description-heading">
                   BENEFITS & VALUE ADDITION OF POLARION

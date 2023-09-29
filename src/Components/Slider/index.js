@@ -56,7 +56,7 @@ class ReactSlick extends Component {
     const settings = {
       dots: false,
       infinite: true,
-      speed: 2000,
+      speed: 3000,
       autoplay: true,
       lazyLoad: "ondemand",
       autoplaySpeed: 5000,
