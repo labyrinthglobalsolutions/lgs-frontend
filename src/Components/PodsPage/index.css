@@ -129,7 +129,7 @@
 .pods-react-icon-size {
   height: 50px;
   width: 60px;
-  color:  #8d2760;
+  color: #8d2760;
 }
 .pods-third-sub-section {
   display: flex;
@@ -535,8 +535,8 @@
   }
 
   .pods-image-third-section {
-    height: 100%;
-    width: 45%;
+    height: 550px;
+    width: 50%;
   }
 
   .pods-react-icon-size {
