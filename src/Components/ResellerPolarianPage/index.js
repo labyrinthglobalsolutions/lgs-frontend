@@ -55,7 +55,8 @@ class ResellerPolarian extends Component {
                   className="polaranpic"
                   src="https://res.cloudinary.com/dg81jw9qd/image/upload/v1689667771/1_xBu5h-5wTAzLvjvAZw6DZA_fspbjh.webp"
                 />
-                {/* <Lottie animationData={ploarionlifecycle} /> */}
+
+
               </div>
             </div>
 

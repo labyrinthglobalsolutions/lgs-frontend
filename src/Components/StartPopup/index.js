@@ -96,15 +96,15 @@ const FirstTimePopup = () => {
         <div className="ppr-popup1">
           <form onSubmit={handleSubmit} className="ppr-popup-content1">
             <div className="ppr-pop-content-image-container1">
-              <h1 className="popup-heading">Get a Free Demo</h1>
-              <p className="popup-para">
-                Please Fill the form our expert will contact you
-              </p>
-              <img
-                className="ppr-callback-logo1"
-                src="https://res.cloudinary.com/dg81jw9qd/image/upload/v1690546385/10-work_2x_fazttu.png"
-                alt="website login"
-              />
+                <h1 className="popup-heading">Get a Free Demo</h1>
+                <p className="popup-para">
+                  Please Fill the form our expert will contact you
+                </p>
+                <img
+                  className="ppr-callback-logo1"
+                  src="https://res.cloudinary.com/dg81jw9qd/image/upload/v1690546385/10-work_2x_fazttu.png"
+                  alt="website login"
+                />
             </div>
             <div className="ppr-pop-content-content-container1">
               <div className="close-container1" onClick={closePopup}>
