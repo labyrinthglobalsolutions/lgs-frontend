@@ -224,6 +224,14 @@ class HomepageHeader extends Component {
               CONTACT US
             </Link>
           </li>
+
+          <li className="nav-mbl-menu-item-hire">
+            <button className="hirepod-mbl-nav-home-btn">
+              <Link to="/pods" className="nav-link">
+                HIRE A POD
+              </Link>
+            </button>
+          </li>
         </ul>
       </div>
     );
@@ -263,11 +271,7 @@ class HomepageHeader extends Component {
               </Link>
               <ul className="nav-menu">
                 <li className="Nav-Service-container nav-menu-item home-padding">
-                  <NavLink
-                    to="/"
-                    activeclassname="active"
-                    className="inactive"
-                  >
+                  <NavLink to="/" activeclassname="active" className="inactive">
                     HOME
                   </NavLink>
                 </li>
@@ -452,6 +456,18 @@ class HomepageHeader extends Component {
                   >
                     CONTACT US
                   </NavLink>
+                </li>
+
+                <li className=" about-us-nav about-padding">
+                  <button className="hirepod-nav-home-btn">
+                    <NavLink
+                      to="/pods"
+                      // activeclassname="active"
+                      className="hire-pod-inactive"
+                    >
+                      HIRE A POD
+                    </NavLink>
+                  </button>
                 </li>
               </ul>
             </div>

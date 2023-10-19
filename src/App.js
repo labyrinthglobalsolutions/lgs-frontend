@@ -34,6 +34,7 @@ import AdminLoginPage from "./Components/Admin/adminLogin";
 import AdminDashboard from "./Components/Admin/admindashboard";
 import { useEffect, useState } from "react";
 import Faqpage from "./Components/FaqPage";
+import Pods from "./Components/PodsPage";
 function App() {
   const apiUrl = process.env.REACT_APP_API_BASE_URL;
 
@@ -111,6 +112,7 @@ function App() {
           {/* Login page */}
           <Route path="/umarmohammadsheikh" element={<AdminLoginPage />} />
           <Route path="/faqsPage" element={<Faqpage />} />
+          <Route path="/pods" Component={Pods} />
         </Routes>
       </div>
     </>
