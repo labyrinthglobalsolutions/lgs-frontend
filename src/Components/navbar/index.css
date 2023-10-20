@@ -12,12 +12,44 @@
   text-decoration: none;
 }
 
+.hire-pod-inactive {
+  text-decoration: none;
+  color: white !important;
+  background-color: #1a5997 !important;
+}
 .active {
   /* Active link styles */
   color: blue; /* Change this to your desired active link color */
   font-weight: bold; /* Or any other styles you want to apply */
 }
 
+.pod-active {
+  background-color: #bd0686 !important;
+}
+
+.hirepod-mbl-nav-home-btn {
+  color: white !important;
+  border-radius: 3px;
+  border-width: 2px;
+  border: none;
+  height: 25px;
+  outline: none;
+  background-color: #1a5997;
+}
+
+.hirepod-nav-home-btn {
+  border-radius: 3px;
+  border-width: 2px;
+  border: none;
+  height: 30px;
+  outline: none;
+}
+
+.nav-mbl-menu-item-hire {
+  font-size: 12px;
+  color: white;
+  cursor: pointer;
+}
 .nav-header {
   display: flex;
   flex-direction: column;

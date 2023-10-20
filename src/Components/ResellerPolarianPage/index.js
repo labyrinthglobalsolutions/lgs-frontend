@@ -4,6 +4,8 @@ import "bootstrap/dist/css/bootstrap.min.css";
 import Header from "../navbar";
 import Footer from "../Footer";
 import { BeatLoader } from "react-spinners";
+import ploarionlifecycle from "./ploarionlifecycle.json";
+import Lottie from "lottie-react";
 
 class ResellerPolarian extends Component {
   state = { loading: true };
@@ -53,6 +55,8 @@ class ResellerPolarian extends Component {
                   className="polaranpic"
                   src="https://res.cloudinary.com/dg81jw9qd/image/upload/v1689667771/1_xBu5h-5wTAzLvjvAZw6DZA_fspbjh.webp"
                 />
+
+
               </div>
             </div>
 

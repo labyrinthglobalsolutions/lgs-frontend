@@ -9,8 +9,9 @@
   height: 100%;
   z-index: 1000;
   background-color: rgba(0, 0, 0, 0.7);
-  border-radius:12px;
+  border-radius: 12px;
   box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+  
 }
 
 .bg-container-3 {
@@ -40,7 +41,6 @@
 .login-welcome-heading {
   color: #152850;
   font-size: 36px;
-
   font-weight: bold;
 }
 
@@ -65,7 +65,7 @@
   outline: none;
   border-radius: 10px;
 }
-.login-button:hover{
+.login-button:hover {
   background-color: #24292d;
 }
 
@@ -244,12 +244,12 @@
   }
 }
 
-.close-1{
+.close-1 {
   color: black !important;
   cursor: pointer;
- font-size: 30px;
+  font-size: 30px;
 }
-.close-container{
+.close-container {
   display: flex;
   justify-content: flex-end;
 }
